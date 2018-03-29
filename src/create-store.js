@@ -1,14 +1,11 @@
 const url = require('url');
 const qs = require('qs');
+const { merge } = require('lodash')
 const { createStore } = require('redux');
 const rootReducer = require('./reducers');
+const filtersReducer = require('./reducers/filters');
 
-// if (typeof window === 'undefined') {
-//   console.log(new global.Headers());
-// }
-
-module.exports = (data, initialFilters) => {
-  const stuffs = { ...data, places: { all: data.places }, filters: { ...initialFilters } };
-  console.log(stuffs)
-  return createStore(rootReducer, stuffs);
+module.exports = (data, filterBy) => {
+  const filters = merge(filtersReducer(undefined, {}), { filterBy });
+  return createStore(rootReducer, { ...data, places: { all: data.places }, filters });
 }
