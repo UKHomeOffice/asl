@@ -6,7 +6,7 @@ const Pdf = require('./pdf');
 
 const createStore = require('../../src/create-store');
 
-const App = (props) => {
+const App = props => {
   const {
     pdf,
     children,
@@ -15,15 +15,13 @@ const App = (props) => {
   const data = pick(props, exposes);
   const store = createStore(data);
   return (
-    <Provider store={store}>
-      { pdf ?
-        <Pdf>{ children }</Pdf> :
-        <Layout { ...props } data={data}>
-          { children }
-        </Layout>
+    <Provider store={ store }>
+      { pdf
+        ? <Pdf>{ children }</Pdf>
+        : <Layout { ...props } data={ data }>{ children }</Layout>
       }
     </Provider>
-  )
-}
+  );
+};
 
 module.exports = App;

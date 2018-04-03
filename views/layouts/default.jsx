@@ -2,7 +2,6 @@ const React = require('react');
 const GovUK = require('govuk-react-components/components/layout');
 const PhaseBanner = require('govuk-react-components/components/phase-banner');
 
-const App = require('./app');
 const Breadcrumb = require('../components/breadcrumb');
 
 const Layout = ({
