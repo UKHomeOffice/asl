@@ -11,10 +11,11 @@ const App = props => {
     pdf,
     children,
     exposes,
-    filters
+    filterBy,
+    textFilter
   } = props;
   const data = pick(props, exposes);
-  const store = createStore(data, filters);
+  const store = createStore(data, { filterBy, textFilter });
   return (
     <Provider store={ store }>
       { pdf
