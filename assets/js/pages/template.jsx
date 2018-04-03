@@ -1,10 +1,8 @@
-/* eslint implicit-dependencies/no-implicit: [2, { dev: true }] */
-
 const React = require('react');
+const url = require('url');
 const { render } = require('react-dom');
 const { Provider } = require('react-redux');
 const { pick } = require('lodash');
-const url = require('url');
 const { format, parse } = require('../../../src/helpers/query-string');
 const Component = require('../../../views/containers/{{page}}');
 const createStore = require('../../../src/create-store');
