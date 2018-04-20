@@ -9,7 +9,7 @@ module.exports = () => {
 
   const router = Router();
 
-  router.get('/:id', api());
+  router.get('/:id', api('/profile/:id'));
 
   router.get('/:id', (req, res, next) => {
     res.template = 'profile';

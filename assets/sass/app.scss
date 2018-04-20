@@ -3,6 +3,10 @@
 @import "./filters";
 @import "./sortable-table";
 
+input[type="file"] {
+  border: none;
+}
+
 .data {
   padding: $gutter;
   background: $govuk-blue;
@@ -53,5 +57,25 @@ th:first-child, th:nth-child(2), th:nth-child(3) {
   > * {
     vertical-align: middle;
     margin-right: 1em;
+  }
+}
+
+table.diff {
+  margin-bottom: $gutter;
+  .before, .after {
+    margin: 0 2px;
+  }
+  .before {
+    background: rgba(255, 0, 0, 0.2);
+    text-decoration: line-through;
+  }
+  .after {
+    background: rgba(0, 255, 0, 0.2);
+  }
+  .array span:after {
+    content: ", ";
+  }
+  .array span:last-child:after {
+    content: "";
   }
 }

@@ -8,7 +8,7 @@ module.exports = () => {
 
   const router = Router();
 
-  router.get('/', api());
+  router.get('/', api('/'));
 
   router.get('/', (req, res, next) => {
     res.template = 'index';

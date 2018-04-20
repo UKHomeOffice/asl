@@ -6,7 +6,7 @@ const ExportLink = ({
   sort
 }) => (
   <p>
-    Export as <a href={`?${stringify({ filter, sort, format: 'pdf' })}`}>PDF</a> | <a href={`?${stringify({ filter, sort, format: 'csv' })}`}>CSV</a>
+    Export as <a href={`?${stringify({ filter, sort, format: 'pdf' })}`}>PDF</a> | <a href={`?${stringify({ filter, sort, format: 'csv' })}`}>CSV</a> | <a href="/places/update">Update this data</a>
   </p>
 );
 

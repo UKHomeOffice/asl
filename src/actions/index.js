@@ -5,7 +5,8 @@ const {
   SET_PROFILE,
   SET_SCHEMA,
   SET_SORT_COLUMN,
-  SET_SORT
+  SET_SORT,
+  SET_CHANGESET
 } = require('../constants/action-types');
 
 const setTextFilter = text => ({
@@ -43,6 +44,11 @@ const setSort = sort => ({
   sort
 });
 
+const setChangeset = changeset => ({
+  type: SET_CHANGESET,
+  changeset
+});
+
 module.exports = {
   setTextFilter,
   setListItems,
@@ -50,5 +56,6 @@ module.exports = {
   setProfile,
   setSchema,
   setSortColumn,
-  setSort
+  setSort,
+  setChangeset
 };

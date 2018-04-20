@@ -9,7 +9,7 @@ module.exports = () => {
 
   const router = Router();
 
-  router.get('/', api());
+  router.get('/', api('/roles'));
 
   router.get('/', list({ schema: Tables.roles }));
 

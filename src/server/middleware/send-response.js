@@ -14,6 +14,10 @@ const formatDataForCsv = (data, schema) => data.map(r => flatten(r, schema));
 
 module.exports = () => (req, res, next) => {
 
+  if (res.headersSent) {
+    return;
+  }
+
   res.locals.store = res.store;
 
   if (res.template) {

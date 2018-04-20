@@ -1,14 +1,16 @@
 const actions = require('../../actions');
 
-module.exports = () => {
+const format = (url, params) => {
+  return url.split('/').map(segment => segment.substr(0, 1) === ':' ? params[segment.substr(1)] : segment).join('/');
+};
+
+module.exports = (url) => {
   return (req, res, next) => {
-    const url = req.originalUrl;
     const establishment = req.user.get('establishment');
     if (!establishment) {
       return next(new Error('No associated establishment'));
     }
-
-    const u = `/establishment/${establishment}${url}`;
+    const u = `/establishment/${establishment}${format(url, req.params)}`;
     req.api(u)
       .then(response => {
         res.store.dispatch(actions.setEstablishment(response.json.meta.establishment));
