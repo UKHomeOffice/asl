@@ -1,6 +1,6 @@
 const csv = require('csv-stringify');
 const { chain, get } = require('lodash');
-const { applyFilter } = require('@ukhomeoffice/asl-components/components/text-filter');
+const { applyFilters } = require('@ukhomeoffice/asl-components/components/filters');
 
 const flatten = (row, schema) => {
   return chain(row)

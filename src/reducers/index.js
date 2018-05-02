@@ -4,7 +4,7 @@ const list = require('./list');
 const profile = require('./profile');
 const user = require('./user');
 const { sort } = require('@ukhomeoffice/asl-components/components/datatable');
-const { filter } = require('@ukhomeoffice/asl-components/components/text-filter');
+const { filters } = require('@ukhomeoffice/asl-components/components/filters');
 
 module.exports = combineReducers({
   establishment,
@@ -12,5 +12,5 @@ module.exports = combineReducers({
   profile,
   user,
   sort,
-  filter
+  filters
 });

@@ -1,14 +1,16 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, Component } from 'react';
 import DataTable from '../containers/datatable';
-import TextFilter from '../containers/text-filter';
+import Filters from '../containers/filters';
 import ExportLink from '../containers/export-link';
 
-export default ({
-  formatters
-}) => (
-  <Fragment>
-    <TextFilter />
-    <DataTable formatters={ formatters } />
-    <ExportLink />
-  </Fragment>
-);
+export default class FilterTable extends Component {
+  render() {
+    return (
+      <Fragment>
+        <Filters />
+        <DataTable formatters={ this.props.formatters } />
+        <ExportLink />
+      </Fragment>
+    )
+  }
+}
