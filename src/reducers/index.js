@@ -8,7 +8,7 @@ const { filters } = require('@ukhomeoffice/asl-components/components/filters');
 module.exports = combineReducers({
   establishment,
   list,
-  profile,
   sort,
+  profile,
   filters
 });

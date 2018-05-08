@@ -13,7 +13,7 @@ describe('Root Reducer', () => {
         column: '',
         ascending: true
       },
-      filter: ''
+      filters: {}
     };
     expect(rootReducer(undefined, {})).toEqual(expected);
   });

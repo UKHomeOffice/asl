@@ -5,16 +5,27 @@ import FilterTable from './components/filter-table';
 import Acronym from './components/acronym';
 import Join from './components/join';
 
-const joinAcronyms = arr => <Join>{ arr.map(a => <Acronym key={a}>{a}</Acronym>) }</Join>;
+const joinAcronyms = data => {
+  if (Array.isArray(data)) {
+    return <Join>{ data.map(a => <Acronym key={a}>{a}</Acronym>) }</Join>;
+  }
+  return <Acronym key={data}>{data}</Acronym>;
+};
 
 export const formatters = {
-  suitability: { format: joinAcronyms },
-  holding: { format: joinAcronyms },
+  suitability: {
+    title: 'Suitability',
+    format: joinAcronyms
+  },
+  holding: {
+    title: 'Holding',
+    format: joinAcronyms
+  },
   nacwo: {
     format: (name, nacwo) => nacwo
       ? <a href={`/profile/${nacwo.profile.id}`}>{ name }</a>
       : '-',
-    title: () => <Acronym>NACWO</Acronym>
+    title: <Acronym>NACWO</Acronym>
   }
 };
 
