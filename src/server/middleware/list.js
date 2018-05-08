@@ -7,7 +7,7 @@ module.exports = ({ schema }) => {
   return (req, res, next) => {
     res.store.dispatch(actions.setSchema(schema));
     res.store.dispatch(actions.setListItems(res.data));
-    if (typeof req.query.filters !== 'undefined') {
+    if (typeof req.query.filters === 'object') {
       res.store.dispatch(setFilters(req.query.filters));
     }
     if (typeof req.query.sort === 'object') {

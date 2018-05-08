@@ -28,7 +28,7 @@ module.exports = () => (req, res, next) => {
         if (state.list) {
           res.type('application/csv');
           res.attachment(`${res.template}.csv`);
-          return csv(formatDataForCsv(applyFilter(state), state.list.schema), { header: true })
+          return csv(formatDataForCsv(applyFilters(state), state.list.schema), { header: true })
             .pipe(res)
             .on('error', next);
         }
