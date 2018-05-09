@@ -4,6 +4,10 @@ const PhaseBanner = require('govuk-react-components/components/phase-banner');
 
 const Breadcrumbs = require('../components/breadcrumbs');
 
+const StatusBar = () => ({
+  __html: `&lt;span&gt;Hi Joe&lt;/span&gt;`
+});
+
 const Layout = ({
   children,
   scripts,
@@ -13,6 +17,7 @@ const Layout = ({
     propositionHeader="Research and testing with animals"
     stylesheets={['/public/css/app.css']}
     scripts={scripts}
+    statusBar={StatusBar}
   >
     <main className="main" id="content">
       <PhaseBanner phase="prototype" />
