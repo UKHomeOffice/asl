@@ -8,6 +8,6 @@ const userReducer = (state = INITIAL_STATE, action) => {
       return action.name;
   }
   return state;
-}
+};
 
 module.exports = userReducer;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const StatusBar = ({
   name,
@@ -8,7 +8,7 @@ const StatusBar = ({
     <span>{`Hi ${name}`}</span>
     <span><a href={logoutLink}>Sign Out</a></span>
   </div>
-)
+);
 
 StatusBar.defaultProps = {
   logoutLink: '/logout'
