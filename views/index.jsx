@@ -2,6 +2,8 @@ const React = require('react');
 const connect = require('../src/helpers/connector');
 const App = require('./layouts/app');
 
+const html = <div>hi</div>
+
 const Index = ({
   store,
   establishment: {

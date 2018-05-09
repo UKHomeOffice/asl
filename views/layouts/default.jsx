@@ -1,12 +1,9 @@
-const React = require('react');
-const GovUK = require('govuk-react-components/components/layout');
-const PhaseBanner = require('govuk-react-components/components/phase-banner');
+import React from 'react';
+import GovUK from 'govuk-react-components/components/layout';
+import PhaseBanner from 'govuk-react-components/components/phase-banner';
 
-const Breadcrumbs = require('../components/breadcrumbs');
-
-const StatusBar = () => ({
-  __html: `&lt;span&gt;Hi Joe&lt;/span&gt;`
-});
+import StatusBar from '../containers/status-bar';
+import Breadcrumbs from '../components/breadcrumbs';
 
 const Layout = ({
   children,
@@ -17,7 +14,7 @@ const Layout = ({
     propositionHeader="Research and testing with animals"
     stylesheets={['/public/css/app.css']}
     scripts={scripts}
-    statusBar={StatusBar}
+    headerContent={<StatusBar />}
   >
     <main className="main" id="content">
       <PhaseBanner phase="prototype" />

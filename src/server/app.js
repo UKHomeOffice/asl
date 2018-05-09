@@ -18,8 +18,7 @@ module.exports = settings => {
   });
 
   app.use((req, res, next) => {
-    // console.log(req.user.get('id'));
-    // res.store.dispatch(setUser(req.user.get('id'), req.user.get('name')));
+    res.store.dispatch(setUser(req.user.get('name')));
     next();
   });
 

@@ -26,9 +26,8 @@ const setSchema = schema => ({
   schema
 });
 
-const setUser = (id, name) => ({
+const setUser = name => ({
   type: SET_USER,
-  id,
   name
 });
 
