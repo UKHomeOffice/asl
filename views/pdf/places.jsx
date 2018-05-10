@@ -1,5 +1,4 @@
 import React from 'react';
-import connect from '../../src/helpers/connector';
 import Pdf from '../layouts/pdf';
 import DataTable from '../containers/datatable';
 
@@ -19,4 +18,4 @@ const PdfList = ({
   );
 };
 
-export default PdfList
+export default PdfList;
