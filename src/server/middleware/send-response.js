@@ -24,11 +24,11 @@ module.exports = () => (req, res, next) => {
         }
         throw new Error('PDF rendering is not suported for this page');
       case 'csv':
-        const state = res.store.getState();
-        if (state.list) {
+        const { list: { data, schema }, filters } = res.store.getState();
+        if (data) {
           res.type('application/csv');
           res.attachment(`${res.template}.csv`);
-          return csv(formatDataForCsv(applyFilters(state), state.list.schema), { header: true })
+          return csv(formatDataForCsv(applyFilters({ data, filters, schema }), schema), { header: true })
             .pipe(res)
             .on('error', next);
         }

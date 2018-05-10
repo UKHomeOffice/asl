@@ -4,6 +4,7 @@ import connect from '../src/helpers/connector';
 import FilterTable from './components/filter-table';
 import Acronym from './components/acronym';
 import Join from './components/join';
+import dict from '@asl/dictionary'
 
 const joinAcronyms = data => {
   if (Array.isArray(data)) {
@@ -12,14 +13,18 @@ const joinAcronyms = data => {
   return <Acronym key={data}>{data}</Acronym>;
 };
 
+const defineValue = val => `${dict[val] || dict[val.toUpperCase()]} (${val})`
+
 export const formatters = {
   suitability: {
     title: 'Suitability',
-    format: joinAcronyms
+    format: joinAcronyms,
+    formatFilterItems: defineValue
   },
   holding: {
     title: 'Holding',
-    format: joinAcronyms
+    format: joinAcronyms,
+    formatFilterItems: defineValue
   },
   nacwo: {
     format: (name, nacwo) => nacwo
