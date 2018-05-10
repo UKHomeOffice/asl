@@ -1,4 +1,4 @@
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import FilterSummary from '../components/filter-summary';
 import { applyFilters } from '@ukhomeoffice/asl-components/components/filters';
 
