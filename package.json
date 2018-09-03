@@ -29,6 +29,7 @@
   "dependencies": {
     "@asl/pages": "^5.5.0",
     "@asl/service": "^4.2.0",
+    "express": "^4.16.3",
     "lodash": "^4.17.10"
   },
   "devDependencies": {
