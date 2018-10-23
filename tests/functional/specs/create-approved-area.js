@@ -13,7 +13,7 @@ describe('Create approved area', () => {
       'STH',
       'Ian Ayers'
     ];
-
+    console.log('');
     browser.withUser('holc');
     browser
       .click('a=University of Croydon')
