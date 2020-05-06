@@ -1,5 +1,7 @@
-.govuk-width-container,
-.wrapper-header,
-.wrapper-footer {
-  max-width: 1200px;
+@media (min-width: 1260px) {
+  .govuk-width-container,
+  .wrapper-header,
+  .wrapper-footer {
+    max-width: 1200px;
+  }
 }
