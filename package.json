@@ -38,19 +38,20 @@
     "@babel/preset-react": "^7.0.0",
     "@ukhomeoffice/frontend-toolkit": "^2.13.1",
     "@ukhomeoffice/react-components": "^0.9.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-require-ignore": "^0.1.1",
     "body-parser": "^1.18.3",
     "deep-diff": "^1.0.2",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.3.0",
     "lodash": "^4.17.21",
     "r2": "^2.0.1",
-    "react": "^16.9.0",
+    "react": "^16.14.0",
     "react-redux": "^7.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.3.3",
-    "babel-loader": "^8.0.5",
-    "babel-plugin-transform-class-properties": "^6.24.1",
+    "@babel/core": "^7.15.5",
+    "babel-loader": "^8.2.2",
     "dotenv": "^5.0.1",
     "eslint": "^4.15.0",
     "eslint-config-lennym": "^2.2.1",
@@ -59,7 +60,7 @@
     "nodemon": "^2.0.4",
     "npm-run-all": "^4.1.5",
     "npm-sass": "^3.0.0",
-    "webpack": "^4.29.5",
+    "webpack": "^4.46.0",
     "webpack-cli": "^3.2.1"
   }
 }
