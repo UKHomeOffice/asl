@@ -43,6 +43,7 @@ function getAlertUrl(alert, buildRoute) {
  *   },
  *   ...
  * ]
+ * Test change
  */
 const summariseEstablishmentAlerts = (alerts = [], profileEstablishments = [], buildRoute) => {
   const grouped = groupBy(alerts, 'establishmentId');
