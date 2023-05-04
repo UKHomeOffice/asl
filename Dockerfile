@@ -14,7 +14,7 @@ RUN --mount=type=secret,id=token \
     NPM_AUTH_USERNAME=`cat /run/secrets/username` \
     NPM_AUTH_TOKEN=`cat /run/secrets/token` \
     GITHUB_AUTH_TOKEN=`cat /run/secrets/github_token` \
-    npm ci --production --no-optional --ignore-scripts
+    echo token: $GITHUB_AUTH_TOKEN username: $NPM_AUTH_USERNAME &&  npm ci --production --no-optional --ignore-scripts
 
 COPY . /app
 
