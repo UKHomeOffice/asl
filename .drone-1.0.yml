@@ -96,6 +96,7 @@ steps:
       - update
         --repo ukhomeoffice/asl-deployments
         --token $${GITHUB_ACCESS_TOKEN}
+        --github_token $${GITHUB_AUTH_TOKEN}
         --file versions.yml
         --service asl
         --version $${DRONE_COMMIT_SHA}
