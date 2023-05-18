@@ -85,6 +85,8 @@ steps:
     environment:
       GITHUB_AUTH_TOKEN:
         from_secret: github_token
+      GITHUB_ACCESS_TOKEN:
+        from_secret: github_access_token
     commands:
       - update
         --repo ukhomeoffice/asl-deployments
