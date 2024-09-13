@@ -1,5 +1,5 @@
 const path = require('path');
-const { merge } = require('lodash');
+const { merge } = require('webpack-merge');
 const pages = path.dirname(require.resolve('@asl/pages/package.json'));
 const defaults = require('@asl/service/ui/webpack.config');
 const babelrc = require('@asl/service/.babelrc.json');
@@ -21,10 +21,7 @@ const config = merge(
       rules: [
         {
           test: /\.jsx?$/,
-          exclude: p => p.match(/node_modules/) &&
-            !p.match(/@joefitter\/docx/) &&
-            !p.match(/@asl/) &&
-            !p.match(/@ukhomeoffice/),
+          exclude: /node_modules\/(?!(@joefitter|@asl|@ukhomeoffice)\/).*/,
           use: {
             loader: 'babel-loader',
             options: babelrc
