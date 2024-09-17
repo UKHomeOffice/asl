@@ -1,4 +1,3 @@
-require('dotenv').config();
 const start = process.hrtime();
 const App = require('./lib/app');
 const settings = require('./config');
