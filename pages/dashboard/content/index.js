@@ -7,7 +7,7 @@ module.exports = merge({}, baseContent, profileContent, {
   tasklist: {
     title: 'Tasks',
     outstanding: {
-      none: 'You have no outstanding tasks test',
+      none: 'You have no outstanding tasks',
       some: 'You have {{count}} outstanding tasks'
     }
   },
